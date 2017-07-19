@@ -1,0 +1,65 @@
+$height:50px;
+@mixin flex{
+    width:33.3%;		
+    position:relative;
+}
+
+@mixin .pic1{
+     width: 100%;/*必须设置图片的宽度为100%，相当于沿着容器进行拉伸*/
+     height: 130px; }
+
+.daohang{
+	background-color:#000;
+	color:white;
+	height:$height;
+    .logo{
+        line-height:50px;
+	    display:inline;	}
+     .menu-child{
+	    margin-right:30px;
+        display:inline;
+	    float:right;
+        line-height:$height;}
+}
+
+.sideBar{
+	margin-top:20px;
+	.sideBar_right{
+        width:20%;}
+	.sideBar_left{
+    width:80%;}
+}	
+
+.sideBar_right{
+    display:block;
+	width:100%;
+}
+
+
+.row1-left{
+		display:flex;
+		padding-bottom:30px;
+		border-bottom:2px solid #CCC;
+        .flex-1{
+            @include box; 
+	    	margin-right:20px;
+            @include .pic1;
+            .word{
+	            position:absolute;
+            	width:100%;
+                top:50%;
+                bottom:0;
+                left:0;
+                background-color:#000;
+                opacity:0.7;
+                line-height:5px;
+                color:#FFF;
+                text-align: center;
+                vertical-align:central;}
+         } 
+        .flex-2{
+            @include box;
+            @include .pic1; }
+}
+
+
